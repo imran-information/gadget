@@ -4,9 +4,9 @@ import Card from './Card';
 
 const Cards = () => {
     const data = useLoaderData()
-    console.log(data);
-    // const category = useParams()
-    // console.log(category);
+    // console.log(data);
+    // const {name} = useParams()
+    // console.log(name);
 
     const [products, setProducts] = useState(data)
 
@@ -17,9 +17,9 @@ const Cards = () => {
 
 
     return (
-        <div className=''>
-            <h1 className='text-2xl text-center -mt-28'>Explore Cutting-Edge Gadgets</h1>
-            <div className='flex mt-10'>
+        <div className=' '>
+            <h1 className='text-2xl text-center -mt-28 mb-10'>Explore Cutting-Edge Gadgets</h1>
+            <div className='flex'>
                 <div>
                     <div className='flex flex-col bg-white w-56 gap-3 p-5 rounded-xl'>
                         <div>
