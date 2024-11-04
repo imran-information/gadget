@@ -6,6 +6,7 @@ import Dashboard from "../pages/Dashboard";
 import Cards from "../components/Cards";
 import CardDetails from "../components/CardDetails";
 import DashboardCart from "../components/DashboardCart";
+import DashboardWishlist from "../components/DashboardWishlist";
 
 const router = createBrowserRouter([
     {
@@ -40,8 +41,15 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>,
-                children:[
-                    
+                children: [
+                    {
+                        path: '/dashboard',
+                        element: <DashboardCart></DashboardCart>
+                    },
+                    // {
+                    //     path: '/dashboard',
+                    //     element: <DashboardWishlist></DashboardWishlist>
+                    // }
                 ]
             },
         ]

@@ -40,4 +40,4 @@ const setHartProductCart = (product) => {
     localStorage.setItem('heart', productStringify)
 }
 
-export { setProductCart, setHartProductCart }
+export { setProductCart, setHartProductCart, getToProduct }
