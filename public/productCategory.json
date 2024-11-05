@@ -1,22 +1,22 @@
 [
     {
         "id": 1,
-        "category": "computers"
+        "category": "Computers"
     },
     {
         "id": 2,
-        "category": "phones"
+        "category": "Phones"
     },
     {
         "id": 3,
-        "category": "smartwatches"
+        "category": "Smartwatches"
     },
     {
         "id": 4,
-        "category": "chargers"
+        "category": "Chargers"
     },
     {
         "id": 5,
-        "category": "powerBanks"
+        "category": "PowerBanks"
     }
 ]

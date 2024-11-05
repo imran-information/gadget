@@ -4,36 +4,27 @@ import Card from './Card';
 
 const Cards = () => {
     const data = useLoaderData()
-    // console.log(data);
-    // const {name} = useParams()
-    // console.log(name);
-
-    const [products, setProducts] = useState(data)
+    const { category } = useParams()
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
-        // const
-        setProducts(data)
-    }, [])
+        if (category) {
+            const filterByProducts = [...data].filter(product => product.category === category)
+            setProducts(filterByProducts)
+        } else {
+            setProducts(data)
+        }
+
+    }, [category, data])
 
 
     return (
-        <div className=' '>
-            <h1 className='text-2xl text-center -mt-28 mb-10'>Explore Cutting-Edge Gadgets</h1>
-            <div className='flex'>
-                <div>
-                    <div className='flex flex-col bg-white w-56 gap-3 p-5 rounded-xl'>
-                        <div>
-                            <button className="btn w-full btn-primary font-bold text-lg text-white">All Category</button>
-                        </div>
-                    </div>
-                </div>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto'>
-                    {
-                        products.map(product => <Card key={product.id} product={product}></Card>)
-                    }
-                </div>
-            </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto'>
+            {
+                products.map(product => <Card key={product.id} product={product}></Card>)
+            }
         </div>
+
 
     );
 };

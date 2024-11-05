@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Card = ({ product }) => {
     const { product_name, image, details, price, id } = product
     return (
-        <div className="card card-compact bg-base-100 w-96 shadow-xl p-5">
+        <div className="card card-compact bg-base-100 w-96 shadow-xl p-5 ">
             <NavLink to={`/details/${id}`}>
                 <figure>
                     <img

@@ -33,7 +33,7 @@
     },
     {
         "id": 5,
-        "category": "Smart Watches",
+        "category": "Smartwatches",
         "product_name": "PulseWatch 4",
         "image": "https://i.ibb.co.com/dmscgkg/OIP.jpg",
         "price": 299.99,
@@ -41,7 +41,7 @@
     },
     {
         "id": 6,
-        "category": "Smart Watches",
+        "category": "Smartwatches",
         "product_name": "ChronoFit Gen3",
         "image": "https://i.ibb.co.com/3WhDGBc/Oraimo-Smart-Watches.webp",
         "price": 199.99,
@@ -65,7 +65,7 @@
     },
     {
         "id": 9,
-        "category": "Power Banks",
+        "category": "PowerBanks",
         "product_name": "PowerBank Max 20000mAh",
         "image": "https://i.ibb.co.com/bPYpgT7/OIP.jpg",
         "price": 59.99,
@@ -73,7 +73,7 @@
     },
     {
         "id": 10,
-        "category": "Power Banks",
+        "category": "PowerBanks",
         "product_name": "MiniJuice 10000mAh",
         "image": "https://i.ibb.co.com/R7gSCVT/OIP.jpg",
         "price": 29.99,
