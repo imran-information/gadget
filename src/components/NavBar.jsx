@@ -1,9 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { FaCartPlus } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa6";
+import { getToHartProduct, getToProduct } from '../utility';
+
 
 const NavBar = () => {
+    const cart = getToProduct()
+    const heart = getToHartProduct()
     return (
-        <div className="navbar bg-base-100 top-0 z-50 backdrop-blur-xl">
+        <div className="navbar mx-auto w-10/12">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,9 +44,18 @@ const NavBar = () => {
 
                 </ul>
             </div>
-            <div className="navbar-end gap-3">
-                <NavLink to='/dashboard' className="btn">Icon1</NavLink>
-                <NavLink to='/dashboard' className="btn">Icon2</NavLink>
+            <div className="navbar-end gap-8">
+                <NavLink to='/dashboard' className="border p-3 rounded-full ">
+                    <FaCartPlus className='text-xl '></FaCartPlus>
+                    <div className='fixed ml-5 text-xl top-5 '>
+                        {cart.length}
+                    </div>
+                </NavLink>
+                <NavLink to='/dashboard' className="border p-3 rounded-full"><FaRegHeart className='text-xl'></FaRegHeart>
+                    <div className='fixed ml-5 text-xl top-5 '>
+                        {heart.length}
+                    </div>
+                </NavLink>
 
             </div>
         </div>

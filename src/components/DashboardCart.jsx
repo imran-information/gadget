@@ -24,7 +24,7 @@ const DashboardCart = () => {
             <div className='flex justify-between items-center'>
                 <div className='text-2xl font-bold'>Cart</div>
                 <div className='flex justify-between gap-10 items-center'>
-                    <h2 className='text-2xl font-bold'>Total cost:</h2>
+                    <h2 className='text-2xl font-bold'>Total cost: {price}</h2>
                     <button onClick={handleShortByProduct} className='btn btn-outline font-bold'>Short by Price</button>
                     <button className='btn btn-outline font-bold'>Purchase</button>
                 </div>

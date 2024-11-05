@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import DashboardCart from '../components/DashboardCart';
+import DashboardWishlist from '../components/DashboardWishlist';
 
 
 const Dashboard = () => {
+    const [toggle, setToggle] = useState(true)
+    const handleToggle = () => {
+        setToggle(true)
+    }
+    const handleToggleWishlist = () => {
+        setToggle(false)
+    }
+
     return (
         <div>
             <div className="hero bg-[#9538E2] min-h-[300px] rounded-xl items-start">
@@ -12,12 +22,15 @@ const Dashboard = () => {
                         <p className="py-6 text-white">
                             Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
                         </p>
-                        <button className="btn mr-5 btn-primary font-bold text-lg text-white">Cart</button>
-                        <button className="btn  btn-primary font-bold text-lg text-white">Wishlist</button>
+                        <button onClick={handleToggle} className="btn mr-5 btn-primary font-bold text-lg text-white">Cart</button>
+                        <button onClick={handleToggleWishlist} className="btn  btn-primary font-bold text-lg text-white">Wishlist</button>
                     </div>
                 </div>
             </div>
-            <Outlet></Outlet>
+            {
+                toggle ? <DashboardCart></DashboardCart> : <DashboardWishlist></DashboardWishlist>
+            }
+
 
         </div>
     );

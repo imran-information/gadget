@@ -47,16 +47,16 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>,
-                children: [
-                    {
-                        path: '/dashboard',
-                        element: <DashboardCart></DashboardCart>
-                    },
-                    // {
-                    //     path: '/dashboard',
-                    //     element: <DashboardWishlist></DashboardWishlist>
-                    // }
-                ]
+                // children: [
+                //     {
+                //         path: '/cart',
+                //         element: <DashboardCart></DashboardCart>
+                //     },
+                //     {
+                //         path: '/wishlist',
+                //         element: <DashboardWishlist></DashboardWishlist>
+                //     }
+                // ]
             },
         ]
     }
