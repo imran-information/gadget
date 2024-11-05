@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <div className="navbar bg-base-100 fixed backdrop-blur-md top-0 z-50">
+        <div className="navbar bg-base-100 top-0 z-50 backdrop-blur-xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,11 +39,9 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                {/* <NavLink className="btn">Icon1</NavLink>
-                <NavLink className="btn">Icon2</NavLink> */}
-                Icon1
-                <br />
-                Icon1
+                <NavLink to='/dashboard' className="btn">Icon1</NavLink>
+                <NavLink to='/dashboard' className="btn">Icon2</NavLink>
+
             </div>
         </div>
     );
