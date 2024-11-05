@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getToHartProduct } from '../utility';
+import { getToHartProduct, removeHeartPro } from '../utility';
 import Card from './Card';
 
 const DashboardWishlist = () => {
@@ -9,12 +9,16 @@ const DashboardWishlist = () => {
 
     useEffect(() => {
         setProduct(getProducts)
-
-
     }, [])
     const handleShortByProduct = () => {
         const sorted = [...getProducts].sort((a, b) => b.price - a.price)
         setProduct(sorted)
+    }
+
+    const handleProductRemove = (id) => {
+        removeHeartPro(id)
+        const getProducts = getToHartProduct()
+        setProduct(getProducts)
     }
     return (
         <div className='my-10'>
@@ -28,7 +32,7 @@ const DashboardWishlist = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-10'>
                 {
-                    product.map(product => <Card key={product.id} product={product}></Card>)
+                    product.map(product => <Card key={product.id} handleProductRemove={handleProductRemove} product={product}></Card>)
 
                 }
             </div>

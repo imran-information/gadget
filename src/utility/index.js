@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getToProduct = () => {
     const getProduct = localStorage.getItem('products');
 
@@ -11,14 +13,26 @@ const setProductCart = (product) => {
     const getProduct = getToProduct();
     const exist = getProduct.find((item => item.id == product.id))
     if (exist) {
-        return alert('alredy added')
+        return toast.error("Already exist !", {
+            position: "top-center"
+        });
     }
     getProduct.push(product)
     const productStringify = JSON.stringify(getProduct)
     localStorage.setItem('products', productStringify)
+    toast.success("Success Added !", {
+        position: "top-center"
+    });
 }
 
-
+const removeProduct = id => {
+    const getProduct = getToProduct();
+    const remaining = getProduct.filter(product => product.id != id)
+    localStorage.setItem('products', JSON.stringify(remaining))
+    toast.success("Success Remove !", {
+        position: "top-center"
+    });
+}
 // handle Heart btn  
 const getToHartProduct = () => {
     const getProduct = localStorage.getItem('heart');
@@ -33,11 +47,25 @@ const setHartProductCart = (product) => {
     const getProduct = getToHartProduct();
     const exist = getProduct.find((item => item.id == product.id))
     if (exist) {
-        return alert('alredy added')
+        return toast.error("Already exist !", {
+            position: "top-center"
+        });
     }
     getProduct.push(product)
     const productStringify = JSON.stringify(getProduct)
     localStorage.setItem('heart', productStringify)
+    toast.success("Success Added !", {
+        position: "top-center"
+    });
 }
 
-export { setProductCart, setHartProductCart, getToProduct, getToHartProduct }
+const removeHeartPro = (id) => {
+    const getProduct = getToHartProduct();
+    const remaining = getProduct.filter(product => product.id != id)
+    localStorage.setItem('heart', JSON.stringify(remaining))
+    toast.success("Success Remove !", {
+        position: "top-center"
+    });
+}
+
+export { setProductCart, setHartProductCart, getToProduct, getToHartProduct, removeProduct, removeHeartPro }

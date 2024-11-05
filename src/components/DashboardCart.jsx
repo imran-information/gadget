@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getToProduct } from '../utility';
+import { getToProduct, removeProduct } from '../utility';
 import Card from './Card';
 
 const DashboardCart = () => {
@@ -18,7 +18,11 @@ const DashboardCart = () => {
         const sorted = [...getProducts].sort((a, b) => b.price - a.price)
         setProduct(sorted)
     }
-
+    const handleProductRemove = (id) => {
+        removeProduct(id)
+        const getProducts = getToProduct()
+        setProduct(getProducts)
+    }
     return (
         <div className='my-10'>
             <div className='flex justify-between items-center'>
@@ -31,7 +35,7 @@ const DashboardCart = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-10'>
                 {
-                    product.map(product => <Card key={product.id} product={product}></Card>)
+                    product.map(product => <Card key={product.id} handleProductRemove={handleProductRemove} product={product}></Card>)
 
                 }
             </div>

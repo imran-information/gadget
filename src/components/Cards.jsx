@@ -6,7 +6,6 @@ const Cards = () => {
     const data = useLoaderData()
     const { category } = useParams()
     const [products, setProducts] = useState([])
-
     useEffect(() => {
         if (category) {
             const filterByProducts = [...data].filter(product => product.category === category)

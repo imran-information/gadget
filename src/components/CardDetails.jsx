@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { setHartProductCart, setProductCart } from '../utility';
-
+import { FaCartPlus } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa6";
 const CardDetails = () => {
     const data = useLoaderData()
     const { id } = useParams()
@@ -19,11 +20,10 @@ const CardDetails = () => {
         setProductCart(product)
     }
     const handleHartAddToCart = (product) => {
-        console.log("clik", product);
-
         setHartProductCart(product)
     }
 
+    
     return (
         <div>
             <div className="hero bg-[#9538E2] min-h-[550px] rounded-xl items-start">
@@ -50,8 +50,8 @@ const CardDetails = () => {
                     <p>Stoke: </p>
                     <p>{details} </p>
                     <div className="card-actions justify-start">
-                        <button onClick={() => handleAddToCart(product)} className="btn btn-primary">Add To Card</button>
-                        <button onClick={() => handleHartAddToCart(product)} className="btn btn-primary">Love</button>
+                        <button onClick={() => handleAddToCart(product)} className="btn btn-primary">Add To Card <FaCartPlus></FaCartPlus></button>
+                        <button onClick={() => handleHartAddToCart(product)} className="btn btn-primary"><FaRegHeart></FaRegHeart></button>
                     </div>
                 </div>
             </div>
