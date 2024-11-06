@@ -31,7 +31,7 @@ const DashboardCart = () => {
         <div className='my-10'>
             <div className='flex justify-between items-center'>
                 <div className='text-2xl font-bold'>Cart</div>
-                <div className='flex justify-between gap-10 items-center'>
+                <div className='md:flex justify-between gap-10 items-center'>
                     <h2 className='text-2xl font-bold'>Total cost: {price}</h2>
                     <button onClick={handleShortByProduct} className='btn btn-outline font-bold'>Short by Price</button>
                     <button onClick={() => (document.getElementById('my_modal_1').showModal(), handlePurchaseProduct())} className='btn btn-outline font-bold'>Purchase</button>

@@ -6,7 +6,7 @@ const Banner = () => {
             <div className="hero bg-[#9538E2] min-h-[700px] rounded-xl items-start">
                 <div className="hero-content text-center">
                     <div className=" mt-28">
-                        <h1 className="text-5xl text-white font-bold">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
+                        <h1 className="text-xl md:text-5xl text-white font-bold">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
                         <p className="py-6 text-white">
                             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                             quasi. In deleniti eaque aut repudiandae et a id nisi.

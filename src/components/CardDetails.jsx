@@ -38,7 +38,7 @@ const CardDetails = () => {
                 </div>
             </div>
 
-            <div className="card flex-row p-8 card-compact bg-base-100 shadow-xl relative -top-64 w-3/5 mx-auto">
+            <div className="card md:flex-row p-8 card-compact bg-base-100 shadow-xl relative -top-64 md:w-3/5 mx-auto">
                 <figure className='flex-1'>
                     <img className='rounded'
                         src={image}
