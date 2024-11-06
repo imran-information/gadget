@@ -3,9 +3,9 @@
 We welcome contributions to this project! Whether you’re fixing bugs, adding new features, improving documentation, or refactoring code, your efforts are appreciated.
 
 ## Table of Contents
+- javaScript
 - React
 - Tailwind
-- javaScript
 - ReactJSX
 - Dynamic Routing 
 - Nested Routes 
