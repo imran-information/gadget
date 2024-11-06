@@ -10,6 +10,7 @@ We welcome contributions to this project! Whether you’re fixing bugs, adding n
 - Dynamic Routing 
 - Nested Routes 
 - Protected Routes 
-- URL Parameters and Query Strings #Custom 404 Page
+- URL Parameters and Query Strings 
+- Custom 404 Page
 
 - [Gadget Heaven](https://symphonious-pavlova-855ad2.netlify.app/)
