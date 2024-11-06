@@ -13,4 +13,4 @@ We welcome contributions to this project! Whether you’re fixing bugs, adding n
 - URL Parameters and Query Strings 
 - Custom 404 Page
 
-## Project link: [Gadget Heaven](https://symphonious-pavlova-855ad2.netlify.app/)
+Project link: [Gadget Heaven](https://symphonious-pavlova-855ad2.netlify.app/)
