@@ -8,8 +8,10 @@ import { getToHartProduct, getToProduct } from '../utility';
 const NavBar = () => {
     const cart = getToProduct()
     const heart = getToHartProduct()
+    
+
     return (
-        <div className="navbar mx-auto w-10/12">
+        <div className="navbar mx-auto  w-10/12">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,23 +30,23 @@ const NavBar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white">
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/statistics'>Statistics</NavLink></li>
                         <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
                     </ul>
                 </div>
-                <NavLink to='/' className="text-xl">Gadget Heaven</NavLink >
+                <NavLink to='/' className="text-xl text-white font-bold">Gadget Heaven</NavLink >
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 text-base gap-4">
+                <ul className="menu menu-horizontal px-1 text-base gap-4 text-white">
                     <li><NavLink to='/'>Home</NavLink></li>
                     <li><NavLink to='/statistics'>Statistics</NavLink></li>
                     <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
 
                 </ul>
             </div>
-            <div className="navbar-end gap-8">
+            <div className="navbar-end gap-8 text-white">
                 <NavLink to='/dashboard' className="border p-3 rounded-full ">
                     <FaCartPlus className='text-xl '></FaCartPlus>
                     <div className='fixed ml-5 text-xl top-5 '>

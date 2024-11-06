@@ -33,6 +33,19 @@ const removeProduct = id => {
         position: "top-center"
     });
 }
+
+const purchaseProduct = () => {
+    const getProduct = getToProduct();
+    if (getProduct.length > 0) {
+        localStorage.clear('products', getProduct)
+
+    }
+    else {
+        return toast.error("Please at to the cart !", {
+            position: "top-center"
+        });
+    }
+}
 // handle Heart btn  
 const getToHartProduct = () => {
     const getProduct = localStorage.getItem('heart');
@@ -68,4 +81,17 @@ const removeHeartPro = (id) => {
     });
 }
 
-export { setProductCart, setHartProductCart, getToProduct, getToHartProduct, removeProduct, removeHeartPro }
+const purchaseHeartProduct = () => {
+    const getProduct = getToHartProduct();
+    if (getProduct.length > 0) {
+        localStorage.clear('products', getProduct)
+
+    }
+    else {
+        return toast.error("Please at to the heart !", {
+            position: "top-center"
+        });
+    }
+}
+
+export { setProductCart, setHartProductCart, getToProduct, getToHartProduct, removeProduct, removeHeartPro, purchaseProduct, purchaseHeartProduct }
